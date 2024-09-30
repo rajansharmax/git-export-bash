@@ -81,7 +81,7 @@ def main():
             for (author, email), messages in sorted(authors.items()):
                 file.write(f"{date} {author} <{email}>\n")
                 for i, message in enumerate(messages, start=1):
-                    file.write(f"{i}. {message}\n")
+                    file.write(f"{' '}. {message}\n")
                 file.write("\n")  # Add an empty line between different authors within the same date
     
     print(f"Exported Git commit messages within specified date range to {output_file}")
